@@ -3,6 +3,7 @@ import '../styles/SecondaryButton.css';
 
 const SecondaryButton = ({ text, onClick }) => {
   const [isTouched, setIsTouched] = useState(false);
+  const [touchedRecently, setTouchedRecently] = useState(false);
 
   const handleTouchStart = () => {
     setIsTouched(true);
@@ -10,11 +11,19 @@ const SecondaryButton = ({ text, onClick }) => {
 
   const handleTouchEnd = () => {
     setIsTouched(false);
-    if (onClick) onClick();
+    if (onClick) {
+      onClick();
+      setTouchedRecently(true);
+      setTimeout(() => {
+        setTouchedRecently(false);
+      }, 300);
+    }
   };
 
   const handleClick = (e) => {
-    if (onClick) onClick(e);
+    if (onClick && !touchedRecently) {
+      onClick(e);
+    }
   };
 
   return (
