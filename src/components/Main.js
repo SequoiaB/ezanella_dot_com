@@ -1,16 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Main.css';
+import '../styles/Button.css';
 
+/**
+ * Main component for the website's main content
+ * Contains the hero section, about section, projects section, and contact section
+ */
 function Main() {
+  const [isPressed, setIsPressed] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsPressed(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsPressed(false);
+  };
+
+  const handleClick = () => {
+    // Navigate to the projects section
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <main className="main-content">
       <div className="container">
         <section className="hero">
           <h2>Welcome to My Personal Website</h2>
           <p>I'm a passionate web developer creating modern and responsive websites.</p>
-          <button className="cta-button">View My Work</button>
+          <div className="button-container">
+            <button 
+              className={`button ${isPressed ? 'pressed' : ''}`}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              onTouchCancel={handleTouchEnd}
+              onClick={handleClick}
+              aria-label="View My Work"
+            >
+              <div>
+                <span>View My Work</span>
+              </div>
+            </button>
+          </div>
         </section>
         
+        {/* About section */}
         <section id="about" className="about-section">
           <h2>About Me</h2>
           <p>
@@ -20,6 +54,7 @@ function Main() {
           </p>
         </section>
         
+        {/* Projects section */}
         <section id="projects" className="projects-section">
           <h2>My Projects</h2>
           <div className="projects-grid">
@@ -38,6 +73,7 @@ function Main() {
           </div>
         </section>
         
+        {/* Contact section */}
         <section id="contact" className="contact-section">
           <h2>Contact Me</h2>
           <p>Feel free to reach out to me at: example@email.com</p>
