@@ -1,0 +1,27 @@
+personal-website/node_modules
+personal-website/package-lock.json
+personal-website/yarn.lock
+personal-website/yarn-error.log
+personal-website/yarn-debug.log
+personal-website/yarn-debug.log.lock
+
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
