@@ -170,4 +170,30 @@ img {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text {
+    width: 100%;
+    min-width: unset;
+  }
 } 

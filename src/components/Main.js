@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Main.css';
 import '../styles/Button.css';
 import SecondaryButton from './SecondaryButton';
+import BillyAnimation from './BillyAnimation';
 
 /**
  * Main component for the website's main content
@@ -48,12 +49,19 @@ function Main() {
         {/* About section */}
         <section id="about" className="about-section">
           <h2>About Me</h2>
-          <p>
-          Hey there! I'm Eddi, an <strong>Information Engineer</strong> with a passion for problem-solving and decentralization. 
-          I specialize in <strong>JavaScript, React, Node.js, and Python</strong>, and I'm currently diving deep into the technical details of ₿itcoin. 
-          When I'm not coding, I explore the power of blockchain beyond speculation, focusing on fairness and distribution. 
-          Oh, and meet my favorite ₿itcoin mascot, Billion Dollar Cat!
-          </p>
+          <div className="about-content">
+            <div className="about-text">
+              <p>
+                Hey there! I'm Eddi, an <strong>Information Engineer</strong> with a passion for problem-solving and decentralization. 
+                I specialize in <strong>JavaScript, React, Node.js, and Python</strong>, and I'm currently diving deep into the technical details of ₿itcoin. 
+                When I'm not coding, I explore the power of blockchain beyond speculation, focusing on fairness and distribution.
+                Oh, and meet my favorite ₿itcoin mascot, BILLION•DOLLAR•CAT, Billy for short.
+              </p>
+            </div>
+          </div>
+          
+          {/* Billy Animation - now beneath the text */}
+          <BillyAnimation />
         </section>
         
         {/* Projects section */}

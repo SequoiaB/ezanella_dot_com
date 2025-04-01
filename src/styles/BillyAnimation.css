@@ -1,0 +1,110 @@
+/**
+ * Billy Animation Styles
+ * 
+ * This file contains styles for the Bitcoin cat (Billy) animation
+ * that appears on button click, grows in size with a spinning effect, 
+ * smoothly rotates from horizontal to vertical position, and then disappears.
+ */
+
+.billy-animation-container {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.billy-button-container {
+  margin: 1.5rem 0;
+}
+
+.billy-animation {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.billy-animation.fade-in {
+  animation: grow-spin-in 1.2s ease-out forwards;
+}
+
+.billy-animation.fade-out {
+  animation: shrink-spin-out 1.2s ease-in forwards;
+}
+
+.billy-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  object-fit: contain;
+}
+
+/* Apply the rotation animation only when fully visible */
+.billy-animation.fade-in .billy-image {
+  animation: smooth-rotate-billy 6s ease-in-out 1.2s; /* Start after fade-in completes */
+}
+
+/* Animation for growing and spinning in */
+@keyframes grow-spin-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.6) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Animation for shrinking and spinning out */
+@keyframes shrink-spin-out {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.6) rotate(-180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(-360deg);
+  }
+}
+
+/* Smoother animation keyframes for Billy rotation without pausing at diagonal */
+@keyframes smooth-rotate-billy {
+  0% {
+    transform: rotate(0deg); /* Start horizontal */
+  }
+  25% {
+    transform: rotate(-90deg); /* Smoothly to vertical */
+  }
+  50% {
+    transform: rotate(-90deg); /* Stay vertical */
+  }
+  75% {
+    transform: rotate(0deg); /* Smoothly back to horizontal */
+  }
+  100% {
+    transform: rotate(0deg); /* End horizontal */
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .billy-animation {
+    width: 150px;
+    height: 150px;
+  }
+} 
