@@ -103,6 +103,12 @@ img {
   background-color: #E67E00;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
 .about-section,
 .projects-section,
 .contact-section {
