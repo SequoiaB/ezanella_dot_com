@@ -1,0 +1,62 @@
+/**
+ * Secondary Button Component Styles
+ * 
+ * This file contains styles for the minimal secondary button with a clean hover effect
+ * that shows an animated line before the button text.
+ */
+
+.secondary-button-wrapper {
+  display: inline-block;
+}
+
+.secondary-button {
+  align-items: center;
+  background-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:before {
+  background-color: #ffffff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all .42s cubic-bezier(.25,.8,.25,1);
+  width: 0;
+}
+
+.secondary-button:hover:before,
+.secondary-button.touched:before {
+  background-color: var(--primary-color);
+  width: 3rem;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .secondary-button {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .secondary-button:hover:before {
+    /* Disable hover effect on touch devices */
+    width: 0;
+  }
+
+  .secondary-button.touched:before {
+    /* Ensure mobile touch devices show the effect on tap */
+    width: 2rem;
+  }
+} 

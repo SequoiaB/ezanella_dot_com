@@ -1,0 +1,17 @@
+/* SocialButtons.css */
+.social-buttons-container {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* These styles will be applied in case we need to override styled-components styles */
+.social-icons .icon {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.social-icons .icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add any additional custom styles here that might be needed to match your site's aesthetic */ 

@@ -103,10 +103,22 @@ img {
   background-color: #E67E00;
 }
 
+/* Button container styling */
 .button-container {
   display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .button-container {
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 .about-section,
@@ -157,5 +169,31 @@ img {
   
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text {
+    width: 100%;
+    min-width: unset;
   }
 } 
