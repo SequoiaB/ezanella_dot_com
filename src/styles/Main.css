@@ -103,10 +103,22 @@ img {
   background-color: #E67E00;
 }
 
+/* Button container styling */
 .button-container {
   display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .button-container {
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 .about-section,
