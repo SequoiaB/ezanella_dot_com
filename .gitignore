@@ -1,10 +1,3 @@
-personal-website/node_modules
-personal-website/package-lock.json
-personal-website/yarn.lock
-personal-website/yarn-error.log
-personal-website/yarn-debug.log
-personal-website/yarn-debug.log.lock
-
 /node_modules
 /.pnp
 .pnp.js
