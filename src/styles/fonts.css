@@ -1,0 +1,60 @@
+/* Font declarations */
+@font-face {
+  font-family: 'Spectral';  /* Using Spectral font */
+  src: url('../assets/fonts/Spectral/Spectral-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;  /* Ensures text remains visible during font loading */
+}
+
+/* Bold font weight */
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic style */
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold Italic style */
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Additional weights */
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../assets/fonts/Spectral/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+} 
