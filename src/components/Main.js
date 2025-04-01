@@ -3,6 +3,7 @@ import '../styles/Main.css';
 import '../styles/Button.css';
 import SecondaryButton from './SecondaryButton';
 import BillyAnimation from './BillyAnimation';
+import SocialButtons from './SocialButtons';
 
 /**
  * Main component for the website's main content
@@ -95,6 +96,7 @@ function Main() {
         <section id="contact" className="contact-section">
           <h2>Contact Me</h2>
           <p>Let's connect! Whether you want to discuss a project, ask about Bitcoin, or just say hi, feel free to reach out through any of the platforms below.</p>
+          <SocialButtons />
         </section>
       </div>
     </main>
