@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <h1 className="logo">My Personal Website</h1>
+        <h1 className="logo">eZanella.com</h1>
         <nav className="nav">
           <ul>
             <li><a href="#home">Home</a></li>
